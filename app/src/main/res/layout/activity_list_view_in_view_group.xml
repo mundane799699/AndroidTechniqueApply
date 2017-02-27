@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_list_view_in_view_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mundane.androidtechniqueapply.ui.activities.ListViewInViewGroupActivity">
+
+    <com.mundane.androidtechniqueapply.view.widgets.HorizontalScrollViewEx2
+        android:id="@+id/horizontal_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv1"
+            android:layout_width="360dp"
+            android:layout_height="match_parent"/>
+        <ListView
+            android:id="@+id/lv2"
+            android:layout_width="360dp"
+            android:layout_height="match_parent"/>
+        <ListView
+            android:id="@+id/lv3"
+            android:layout_width="360dp"
+            android:layout_height="match_parent"/>
+
+    </com.mundane.androidtechniqueapply.view.widgets.HorizontalScrollViewEx2>
+
+</RelativeLayout>
