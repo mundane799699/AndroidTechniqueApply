@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("横向ViewPager嵌套竖直ViewPager", "HorizontalViewPagerActivity"),
 				new ActivityModel("测试ontouchevent", "TestOntouchEventActivity"),
 				new ActivityModel("ViewPager中嵌套ListView", "ListViewInViewPagerActivity"),
-				new ActivityModel("ViewGroup中嵌套ListView产生滑动冲突", "ListViewInViewGroupActivity")
+				new ActivityModel("外部拦截法解决ViewGroup嵌套ListView滑动冲突", "ListViewInViewGroupActivity"),
+				new ActivityModel("内部拦截法解决ViewGroup嵌套ListView滑动冲突", "ListViewInViewGroupActivity2")
 		};
 		mAdapter = new MyRecyclerAdapter(arr, this);
 		mRv.setAdapter(mAdapter);

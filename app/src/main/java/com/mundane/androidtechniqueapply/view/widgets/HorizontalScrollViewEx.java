@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Scroller;
 
-public class HorizontalScrollViewEx2 extends ViewGroup {
+public class HorizontalScrollViewEx extends ViewGroup {
 
     private int mChildrenSize;
     private int mChildWidth;
@@ -25,17 +25,17 @@ public class HorizontalScrollViewEx2 extends ViewGroup {
     private Scroller mScroller;
     private VelocityTracker mVelocityTracker;
 
-    public HorizontalScrollViewEx2(Context context) {
+    public HorizontalScrollViewEx(Context context) {
         super(context);
         init();
     }
 
-    public HorizontalScrollViewEx2(Context context, AttributeSet attrs) {
+    public HorizontalScrollViewEx(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public HorizontalScrollViewEx2(Context context, AttributeSet attrs, int defStyle) {
+    public HorizontalScrollViewEx(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init();
     }
@@ -49,16 +49,46 @@ public class HorizontalScrollViewEx2 extends ViewGroup {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent event) {
-		int x = (int) event.getX();
-		int y = (int) event.getY();
+		boolean intercepted = false;//	默认不拦截, 将事件传递给子View
+        int x = (int) event.getX();
+        int y = (int) event.getY();
 		switch (event.getAction()) {
 			case MotionEvent.ACTION_DOWN:
-				mLastX = x;
-				mLastY = y;
-				return false;//这里必须是false, 否则之后的任何事件都不会回调在子View的dispatchTouchEvent()中
+				Log.d(TAG, "onInterceptTouchEvent: ACTION_DOWN");
+				intercepted = false;
+				//这里一定要是false
+				//根据的是, 某个View一旦决定拦截事件，那么这个事件序列之后的事件都会由它来处理，并且不会再调用onInterceptTouchEvent
+
+//				if (!mScroller.isFinished()) {//	如果外层"ViewPager"还没有停止滑动, 就立刻停止滑动
+//					mScroller.abortAnimation();
+////					intercepted = true;
+//				}
+				break;
+			case MotionEvent.ACTION_MOVE:
+				Log.d(TAG, "onInterceptTouchEvent: ACTION_MOVE");
+				int deltaX = x - mLastXIntercept;
+				int deltaY = y - mLastYIntercept;
+				if (Math.abs(deltaX) > Math.abs(deltaY)) {//	如果x方向上的位移超过了y方向上的位移, 就拦截该事件,
+					intercepted = true;                   //	否则说明y方向上的位移超过了x方向上的位移, 不拦截该事件, 将事件传递给子View, 让ListView能够滑动
+					//一旦这里返回为true, 如果手指一直按着屏幕来回移动而不抬手, 就一直拦截并且不会再调用onInterceptTouchEvent方法
+				} else {
+					intercepted = false;
+				}
+				break;
+			case MotionEvent.ACTION_UP:
+				Log.d(TAG, "onInterceptTouchEvent: ACTION_UP");
+				intercepted = false;
+				break;
 			default:
-				return true;
+				break;
+
 		}
+		Log.d(TAG, "onInterceptTouchEvent: intercepted = " + intercepted);
+		mLastX = x;
+		mLastY = y;
+		mLastXIntercept = x;
+		mLastYIntercept = y;
+		return intercepted;
 	}
 
     @Override

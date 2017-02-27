@@ -7,24 +7,24 @@
     android:layout_height="match_parent"
     tools:context="com.mundane.androidtechniqueapply.ui.activities.ListViewInViewGroupActivity">
 
-    <com.mundane.androidtechniqueapply.view.widgets.HorizontalScrollViewEx
+    <com.mundane.androidtechniqueapply.view.widgets.HorizontalScrollViewEx2
         android:id="@+id/horizontal_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ListView
+        <com.mundane.androidtechniqueapply.view.widgets.MyListView
             android:id="@+id/lv1"
             android:layout_width="360dp"
             android:layout_height="match_parent"/>
-        <ListView
+        <com.mundane.androidtechniqueapply.view.widgets.MyListView
             android:id="@+id/lv2"
             android:layout_width="360dp"
             android:layout_height="match_parent"/>
-        <ListView
+        <com.mundane.androidtechniqueapply.view.widgets.MyListView
             android:id="@+id/lv3"
             android:layout_width="360dp"
             android:layout_height="match_parent"/>
 
-    </com.mundane.androidtechniqueapply.view.widgets.HorizontalScrollViewEx>
+    </com.mundane.androidtechniqueapply.view.widgets.HorizontalScrollViewEx2>
 
 </RelativeLayout>

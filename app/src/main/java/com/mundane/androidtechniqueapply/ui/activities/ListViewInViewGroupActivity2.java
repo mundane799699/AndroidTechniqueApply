@@ -5,33 +5,33 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import com.mundane.androidtechniqueapply.R;
-import com.mundane.androidtechniqueapply.view.widgets.HorizontalScrollViewEx;
+import com.mundane.androidtechniqueapply.view.widgets.HorizontalScrollViewEx2;
+import com.mundane.androidtechniqueapply.view.widgets.MyListView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ListViewInViewGroupActivity extends AppCompatActivity {
+public class ListViewInViewGroupActivity2 extends AppCompatActivity {
 
 
 	@BindView(R.id.lv1)
-	ListView mLv1;
+	MyListView mLv1;
 	@BindView(R.id.lv2)
-	ListView mLv2;
+	MyListView mLv2;
 	@BindView(R.id.lv3)
-	ListView mLv3;
+	MyListView mLv3;
 	@BindView(R.id.horizontal_scrollview)
-	HorizontalScrollViewEx mHorizontalScrollview;
+	HorizontalScrollViewEx2 mHorizontalScrollview;
 	@BindView(R.id.activity_list_view_in_view_group)
 	RelativeLayout mActivityListViewInViewGroup;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_list_view_in_view_group);
+		setContentView(R.layout.activity2_list_view_in_view_group);
 		ButterKnife.bind(this);
 		initActionBar();
 		String[] arr = new String[100];
@@ -45,7 +45,7 @@ public class ListViewInViewGroupActivity extends AppCompatActivity {
 
 	private void initActionBar() {
 		ActionBar actionBar = getSupportActionBar();
-		actionBar.setTitle("外部拦截法解决滑动冲突示例");
+		actionBar.setTitle("内部拦截法解决滑动冲突示例");
 		actionBar.setDisplayHomeAsUpEnabled(true);
 	}
 
