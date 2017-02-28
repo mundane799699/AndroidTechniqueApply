@@ -57,7 +57,7 @@ public class VerticalViewPagerActivity extends AppCompatActivity {
 		}
 		mContentAdapter = new ContentAdapter(getSupportFragmentManager(), mFragmentList);
 		mVerticalpager.setAdapter(mContentAdapter);
-		mHandler.postDelayed(mRunnable, 1000);
+//		mHandler.postDelayed(mRunnable, 1000);
 	}
 
 	@Override
