@@ -37,23 +37,27 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 	}
 
 
-
 	@Override
-	public void onBindViewHolder(MyRecyclerAdapter.MyViewHolder holder, int position) {
+	public void onBindViewHolder(final MyRecyclerAdapter.MyViewHolder holder, int position) {
 		final ActivityModel activityModel = mArr[position];
 		final String text = activityModel.text;
 		final String action = activityModel.action;
 		holder.tv.setText(text);
-		holder.tv.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				if (action != null) {
+		if (action != null) {
+			holder.tv.setBackgroundResource(android.R.color.holo_green_dark);
+
+			holder.tv.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
 					Intent intent = new Intent(action);
 					intent.putExtra(Constant.KEY_INTENT, text);
 					mContext.startActivity(intent);
 				}
-			}
-		});
+			});
+		} else {
+			holder.tv.setBackgroundResource(android.R.color.transparent);
+		}
+
 	}
 
 	@Override
@@ -63,6 +67,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 
 	static class MyViewHolder extends RecyclerView.ViewHolder {
 		TextView tv;
+
 		public MyViewHolder(TextView itemView) {
 			super(itemView);
 			tv = itemView;

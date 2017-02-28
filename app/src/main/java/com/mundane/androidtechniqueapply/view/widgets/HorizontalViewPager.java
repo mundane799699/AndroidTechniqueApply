@@ -29,6 +29,8 @@ public class HorizontalViewPager extends ViewPager {
 
 	private float mDownX;
 	private float mDownY;
+	private float mLastX;
+	private float mLastY;
 	@Override
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
 		boolean intercept = super.onInterceptTouchEvent(ev);
@@ -51,6 +53,23 @@ public class HorizontalViewPager extends ViewPager {
 				break;
 
 		}
+
+		//	下面这种写法也可以
+		/*switch (ev.getAction()) {
+			case MotionEvent.ACTION_MOVE:
+				float dx = Math.abs(x - mLastX);
+				float dy = Math.abs(y - mLastY);
+				if (dx > dy) {
+					intercept = true;
+				} else {
+					intercept = false;
+				}
+				break;
+			default:
+				break;
+		}
+		mLastX = x;
+		mLastY = y;*/
 		return intercept;
 	}
 }

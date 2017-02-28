@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.mundane.androidtechniqueapply.R;
 import com.mundane.androidtechniqueapply.view.adapter.MyViewAdapter;
@@ -26,6 +27,8 @@ public class OneLevelFragment extends Fragment {
 
 	@BindView(R.id.vertical_viewpager)
 	VerticalViewPager mVerticalViewpager;
+	@BindView(R.id.tv)
+	TextView mTv;
 	private MyViewAdapter mAdapter;
 	private int mIndex;
 
@@ -63,6 +66,7 @@ public class OneLevelFragment extends Fragment {
 		View view2 = inflater.inflate(R.layout.layout2, null);
 		View view3 = inflater.inflate(R.layout.layout3, null);
 		mViewList = new ArrayList<>();
+		mTv.setText("" + mIndex);
 		if (mIndex == 0) {
 			mViewList.add(view1);
 			mViewList.add(view2);

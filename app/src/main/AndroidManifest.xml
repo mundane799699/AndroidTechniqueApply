@@ -53,6 +53,14 @@
         <activity android:name=".ui.activities.ListViewInViewGroupActivity2">
             <intent-filter>
                 <action android:name="ListViewInViewGroupActivity2"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activities.ListViewInScrollViewActivity">
+            <intent-filter>
+                <action android:name="ListViewInScrollViewActivity"/>
+
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
