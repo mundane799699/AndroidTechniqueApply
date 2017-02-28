@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("内部拦截法解决ViewGroup嵌套ListView滑动冲突", "ListViewInViewGroupActivity2"),
 				new ActivityModel("外部拦截法解决ScrollView嵌套ListView滑动冲突", "ListViewInScrollViewActivity"),
 				new ActivityModel("仿网易云音乐LoaddingActivity到MainActivity过渡动画", null),
-				new ActivityModel("不使用IInteger.MAX_VALUE的banner", null),
+				new ActivityModel("不使用IInteger.MAX_VALUE的banner", "NotIntegerMaxValueBannerActivity"),
 				new ActivityModel("又一个解决滑动冲突的demo", null),
 				new ActivityModel("多重ViewPager嵌套解决滑动冲突", null),
 				new ActivityModel("仿微信底部滑动变色的tab", null),
