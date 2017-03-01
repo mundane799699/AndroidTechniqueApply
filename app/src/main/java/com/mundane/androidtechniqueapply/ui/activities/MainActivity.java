@@ -42,12 +42,15 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("内部拦截法解决ViewGroup嵌套ListView滑动冲突", "ListViewInViewGroupActivity2"),
 				new ActivityModel("外部拦截法解决ScrollView嵌套ListView滑动冲突", "ListViewInScrollViewActivity"),
 				new ActivityModel("仿网易云音乐LoaddingActivity到MainActivity过渡动画", null),
+				new ActivityModel("动画练习合集", null), 
 				new ActivityModel("不使用IInteger.MAX_VALUE的banner", "NotIntegerMaxValueBannerActivity"),
+				new ActivityModel("自定义下拉刷新", "CustomPullToRefreshActivity"),
 				new ActivityModel("又一个解决滑动冲突的demo", null),
 				new ActivityModel("多重ViewPager嵌套解决滑动冲突", null),
 				new ActivityModel("仿微信底部滑动变色的tab", null),
 				new ActivityModel("圆形头像的多种实现方式", null),
-				new ActivityModel("类似微信中ViewPager的fragment懒加载", null)
+				new ActivityModel("类似微信中ViewPager的fragment懒加载", null),
+				new ActivityModel("6.0权限示例", null)
 		};
 		mAdapter = new MyRecyclerAdapter(arr, this);
 		mRv.setAdapter(mAdapter);

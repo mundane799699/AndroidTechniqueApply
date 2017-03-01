@@ -26,7 +26,6 @@ public class BannerAdapter extends PagerAdapter {
 
 	public BannerAdapter(int[] drawables, Context context, ViewPager banner) {
 		mArrDrawables = drawables;
-		mContext = context;
 		mLayoutInflater = LayoutInflater.from(context);
 		mBanner = banner;
 	}
