@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("外部拦截法解决ScrollView嵌套ListView滑动冲突", "ListViewInScrollViewActivity"),
 				new ActivityModel("仿网易云音乐LoaddingActivity到MainActivity过渡动画", "LikeNetEaseMusicAnimationActivity"),
 				new ActivityModel("卫星菜单", null),
+				//ScrollView嵌套ListView滑动冲突解决:判断触摸的是否是ListView, 如果是, 由ListView来消费这个事件, 如果不是, 给ScrollView
+				new ActivityModel("内部拦截法解决ScrollView嵌套ListView滑动冲突", null),
 				new ActivityModel("动画练习合集", null),
 				new ActivityModel("流式布局", null),
 				new ActivityModel("简易的PhotoView", null),
