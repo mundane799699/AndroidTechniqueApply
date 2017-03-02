@@ -10,75 +10,88 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activities.VerticalViewPagerActivity">
+        <activity android:name=".ui.activitity.VerticalViewPagerActivity">
             <intent-filter>
                 <action android:name="VerticalViewPagerActivity"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.MainActivity">
+        <activity android:name=".ui.activitity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.HorizontalViewPagerActivity">
+        <activity android:name=".ui.activitity.HorizontalViewPagerActivity">
             <intent-filter>
                 <action android:name="HorizontalViewPagerActivity"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.TestOntouchEventActivity">
+        <activity android:name=".ui.activitity.TestOntouchEventActivity">
             <intent-filter>
                 <action android:name="TestOntouchEventActivity"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.ListViewInViewPagerActivity">
+        <activity android:name=".ui.activitity.ListViewInViewPagerActivity">
             <intent-filter>
                 <action android:name="ListViewInViewPagerActivity"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.ListViewInViewGroupActivity">
+        <activity android:name=".ui.activitity.ListViewInViewGroupActivity">
             <intent-filter>
                 <action android:name="ListViewInViewGroupActivity"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.ListViewInViewGroupActivity2">
+        <activity android:name=".ui.activitity.ListViewInViewGroupActivity2">
             <intent-filter>
                 <action android:name="ListViewInViewGroupActivity2"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.ListViewInScrollViewActivity">
+        <activity android:name=".ui.activitity.ListViewInScrollViewActivity">
             <intent-filter>
                 <action android:name="ListViewInScrollViewActivity"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.NotIntegerMaxValueBannerActivity">
+        <activity android:name=".ui.activitity.NotIntegerMaxValueBannerActivity">
             <intent-filter>
                 <action android:name="NotIntegerMaxValueBannerActivity"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.CustomPullToRefreshActivity">
+        <activity android:name=".ui.activitity.CustomPullToRefreshActivity">
             <intent-filter>
                 <action android:name="CustomPullToRefreshActivity"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.activitity.LikeNetEaseMusicAnimationActivity">
+            <intent-filter>
+                <action android:name="LikeNetEaseMusicAnimationActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.activitity.LikeNetEaseMusiMainActivity">
         </activity>
     </application>
 

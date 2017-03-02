@@ -1,4 +1,4 @@
-package com.mundane.androidtechniqueapply.ui.activities;
+package com.mundane.androidtechniqueapply.ui.activitity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 
 import com.mundane.androidtechniqueapply.R;
 import com.mundane.androidtechniqueapply.base.BaseActionBarActivity;
-import com.mundane.androidtechniqueapply.ui.fragments.ContentFragment;
+import com.mundane.androidtechniqueapply.ui.fragment.ContentFragment;
 import com.mundane.androidtechniqueapply.view.adapter.ContentAdapter;
 import com.mundane.androidtechniqueapply.view.widgets.VerticalViewPager;
 

@@ -1,4 +1,4 @@
-package com.mundane.androidtechniqueapply.ui.fragments;
+package com.mundane.androidtechniqueapply.ui.fragment;
 
 
 import android.os.Bundle;

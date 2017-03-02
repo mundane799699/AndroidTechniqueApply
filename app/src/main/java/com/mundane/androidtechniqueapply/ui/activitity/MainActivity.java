@@ -1,4 +1,4 @@
-package com.mundane.androidtechniqueapply.ui.activities;
+package com.mundane.androidtechniqueapply.ui.activitity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -41,9 +41,14 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("外部拦截法解决ViewGroup嵌套ListView滑动冲突", "ListViewInViewGroupActivity"),
 				new ActivityModel("内部拦截法解决ViewGroup嵌套ListView滑动冲突", "ListViewInViewGroupActivity2"),
 				new ActivityModel("外部拦截法解决ScrollView嵌套ListView滑动冲突", "ListViewInScrollViewActivity"),
-				new ActivityModel("仿网易云音乐LoaddingActivity到MainActivity过渡动画", null),
-				new ActivityModel("动画练习合集", null), 
-				new ActivityModel("不使用IInteger.MAX_VALUE的banner", "NotIntegerMaxValueBannerActivity"),
+				new ActivityModel("仿网易云音乐LoaddingActivity到MainActivity过渡动画", "LikeNetEaseMusicAnimationActivity"),
+				new ActivityModel("卫星菜单", null),
+				new ActivityModel("动画练习合集", null),
+				new ActivityModel("流式布局", null),
+				new ActivityModel("简易的PhotoView", null),
+				new ActivityModel("仿美团吸顶", null),
+				new ActivityModel("可拖拽的GridLayout", null),
+				new ActivityModel("不使用Integer.MAX_VALUE的banner", "NotIntegerMaxValueBannerActivity"),
 				new ActivityModel("自定义下拉刷新", "CustomPullToRefreshActivity"),
 				new ActivityModel("又一个解决滑动冲突的demo", null),
 				new ActivityModel("多重ViewPager嵌套解决滑动冲突", null),

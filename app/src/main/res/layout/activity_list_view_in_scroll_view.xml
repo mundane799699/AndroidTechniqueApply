@@ -5,7 +5,7 @@
     android:id="@+id/activity_list_view_in_scroll_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mundane.androidtechniqueapply.ui.activities.ListViewInScrollViewActivity">
+    tools:context="com.mundane.androidtechniqueapply.ui.activitity.ListViewInScrollViewActivity">
     <com.mundane.androidtechniqueapply.view.widgets.MyScrollView
         android:id="@+id/my_scrollview"
         android:layout_width="match_parent"

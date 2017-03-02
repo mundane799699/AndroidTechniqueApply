@@ -1,4 +1,4 @@
-package com.mundane.androidtechniqueapply.ui.activities;
+package com.mundane.androidtechniqueapply.ui.activitity;
 
 import android.content.Context;
 import android.hardware.Sensor;

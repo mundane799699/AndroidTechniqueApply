@@ -1,4 +1,4 @@
-package com.mundane.androidtechniqueapply.ui.activities;
+package com.mundane.androidtechniqueapply.ui.activitity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 
 import com.mundane.androidtechniqueapply.R;
 import com.mundane.androidtechniqueapply.base.BaseActionBarActivity;
-import com.mundane.androidtechniqueapply.ui.fragments.TestTouchConflictFragment;
+import com.mundane.androidtechniqueapply.ui.fragment.TestTouchConflictFragment;
 import com.mundane.androidtechniqueapply.view.adapter.TouchConflictAdapter;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.mundane.androidtechniqueapply.ui.fragments;
+package com.mundane.androidtechniqueapply.ui.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -35,7 +35,7 @@ public class TestTouchConflictFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragments
+        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_test_touch_conflict, container, false);
         ButterKnife.bind(this, view);
         String[] arr = new String[100];

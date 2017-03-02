@@ -5,7 +5,7 @@
     android:id="@+id/activity_custom_pull_to_refresh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mundane.androidtechniqueapply.ui.activities.CustomPullToRefreshActivity">
+    tools:context="com.mundane.androidtechniqueapply.ui.activitity.CustomPullToRefreshActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"

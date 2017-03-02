@@ -1,4 +1,4 @@
-package com.mundane.androidtechniqueapply.ui.activities;
+package com.mundane.androidtechniqueapply.ui.activitity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,8 +7,8 @@ import android.widget.RelativeLayout;
 
 import com.mundane.androidtechniqueapply.R;
 import com.mundane.androidtechniqueapply.base.BaseActionBarActivity;
-import com.mundane.androidtechniqueapply.ui.fragments.CustomPullToRefreshFragment;
-import com.mundane.androidtechniqueapply.ui.fragments.SwipeRefreshLayoutFragment;
+import com.mundane.androidtechniqueapply.ui.fragment.CustomPullToRefreshFragment;
+import com.mundane.androidtechniqueapply.ui.fragment.SwipeRefreshLayoutFragment;
 import com.mundane.androidtechniqueapply.view.adapter.ContentAdapter;
 
 import java.util.ArrayList;

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.mundane.androidtechniqueapply.ui.fragments.OneLevelFragment">
+    tools:context="com.mundane.androidtechniqueapply.ui.fragment.OneLevelFragment">
 
     <TextView
         android:id="@+id/tv"

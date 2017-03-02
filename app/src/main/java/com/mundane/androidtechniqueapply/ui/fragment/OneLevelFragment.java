@@ -1,4 +1,4 @@
-package com.mundane.androidtechniqueapply.ui.fragments;
+package com.mundane.androidtechniqueapply.ui.fragment;
 
 
 import android.os.Bundle;
@@ -59,7 +59,7 @@ public class OneLevelFragment extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		// Inflate the layout for this fragments
+		// Inflate the layout for this fragment
 		View view = inflater.inflate(R.layout.fragment_one_level, container, false);
 		ButterKnife.bind(this, view);
 		View view1 = inflater.inflate(R.layout.layout1, null);
