@@ -1,4 +1,4 @@
-package com.mundane.androidtechniqueapply.view.widgets;
+package com.mundane.androidtechniqueapply.view.widget;
 
 import android.animation.TypeEvaluator;
 import android.graphics.PointF;

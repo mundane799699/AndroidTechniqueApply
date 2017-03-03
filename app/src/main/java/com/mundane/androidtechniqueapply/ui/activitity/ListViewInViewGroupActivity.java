@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 
 import com.mundane.androidtechniqueapply.R;
 import com.mundane.androidtechniqueapply.base.BaseActionBarActivity;
-import com.mundane.androidtechniqueapply.view.widgets.HorizontalScrollViewEx;
+import com.mundane.androidtechniqueapply.view.widget.HorizontalScrollViewEx;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -7,16 +7,16 @@
     android:layout_height="match_parent"
     tools:context="com.mundane.androidtechniqueapply.ui.activitity.TestOntouchEventActivity">
 
-    <com.mundane.androidtechniqueapply.view.widgets.MyTouchView
+    <com.mundane.androidtechniqueapply.view.widget.MyTouchView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         
-        <com.mundane.androidtechniqueapply.view.widgets.MyButton
+        <com.mundane.androidtechniqueapply.view.widget.MyButton
             android:gravity="center"
             android:text="button"
             android:textSize="28sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-    </com.mundane.androidtechniqueapply.view.widgets.MyTouchView>
+    </com.mundane.androidtechniqueapply.view.widget.MyTouchView>
 </RelativeLayout>

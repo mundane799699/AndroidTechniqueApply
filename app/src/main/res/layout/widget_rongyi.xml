@@ -23,7 +23,7 @@
             android:layout_gravity="center_horizontal|bottom"
             android:background="@drawable/refresh_box"/>
 
-        <com.mundane.androidtechniqueapply.view.widgets.Bezier
+        <com.mundane.androidtechniqueapply.view.widget.Bezier
             android:id="@+id/bezier_line"
             android:layout_width="50dp"
             android:layout_height="55dp"

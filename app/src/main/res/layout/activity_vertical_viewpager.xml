@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     tools:context="com.mundane.androidtechniqueapply.ui.activitity.VerticalViewPagerActivity">
 
-    <com.mundane.androidtechniqueapply.view.widgets.VerticalViewPager
+    <com.mundane.androidtechniqueapply.view.widget.VerticalViewPager
         android:id="@+id/verticalpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></com.mundane.androidtechniqueapply.view.widgets.VerticalViewPager>
+        android:layout_height="match_parent"></com.mundane.androidtechniqueapply.view.widget.VerticalViewPager>
 </RelativeLayout>

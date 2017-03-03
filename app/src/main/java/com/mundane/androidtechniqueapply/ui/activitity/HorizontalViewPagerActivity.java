@@ -9,7 +9,7 @@ import com.mundane.androidtechniqueapply.base.BaseActionBarActivity;
 import com.mundane.androidtechniqueapply.ui.fragment.OneLevelFragment;
 import com.mundane.androidtechniqueapply.view.adapter.ContentAdapter;
 import com.mundane.androidtechniqueapply.view.transforms.ZoomOutPageTransformer;
-import com.mundane.androidtechniqueapply.view.widgets.HorizontalViewPager;
+import com.mundane.androidtechniqueapply.view.widget.HorizontalViewPager;
 
 import java.util.ArrayList;
 import java.util.List;

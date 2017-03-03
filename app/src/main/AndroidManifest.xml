@@ -81,8 +81,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:name=".ui.activitity.LikeNetEaseMusicAnimationActivity">
+            android:name=".ui.activitity.LikeNetEaseMusicAnimationActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="LikeNetEaseMusicAnimationActivity"/>
 
@@ -90,8 +90,21 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.activitity.LikeNetEaseMusiMainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activitity.NestedScrollingActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="NestedScrollingActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:name=".ui.activitity.LikeNetEaseMusiMainActivity">
+            android:name=".ui.activitity.LikeZhiHuActivity">
         </activity>
     </application>
 

@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.mundane.androidtechniqueapply.R;
 import com.mundane.androidtechniqueapply.view.adapter.MyViewAdapter;
-import com.mundane.androidtechniqueapply.view.widgets.VerticalViewPager;
+import com.mundane.androidtechniqueapply.view.widget.VerticalViewPager;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.mundane.androidtechniqueapply.view.widgets;
+package com.mundane.androidtechniqueapply.view.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -91,4 +91,11 @@ public class MyScrollView extends ScrollView {
 		}
 		return isReachBottom;
 	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent ev) {
+		Log.d(TAG, "getScrollY() = " + getScrollY());
+		return super.onTouchEvent(ev);
+	}
+
 }

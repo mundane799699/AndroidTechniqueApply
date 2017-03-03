@@ -7,11 +7,11 @@
     android:layout_height="match_parent"
     tools:context="com.mundane.androidtechniqueapply.ui.activitity.HorizontalViewPagerActivity">
 
-    <com.mundane.androidtechniqueapply.view.widgets.HorizontalViewPager
+    <com.mundane.androidtechniqueapply.view.widget.HorizontalViewPager
         android:id="@+id/horizontal_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </com.mundane.androidtechniqueapply.view.widgets.HorizontalViewPager>
+    </com.mundane.androidtechniqueapply.view.widget.HorizontalViewPager>
 
 </RelativeLayout>

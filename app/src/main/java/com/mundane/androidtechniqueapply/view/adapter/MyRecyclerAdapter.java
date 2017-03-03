@@ -45,7 +45,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 		holder.tv.setText(text);
 		if (action != null) {
 			holder.tv.setBackgroundResource(android.R.color.holo_green_dark);
-
 			holder.tv.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -56,6 +55,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 			});
 		} else {
 			holder.tv.setBackgroundResource(android.R.color.transparent);
+			holder.tv.setOnClickListener(null);
 		}
 
 	}

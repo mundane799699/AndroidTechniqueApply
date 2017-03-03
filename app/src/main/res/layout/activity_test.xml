@@ -10,10 +10,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.mundane.androidtechniqueapply.ui.activitity.TestActivity">
-    <com.mundane.androidtechniqueapply.view.widgets.ShopView
+    <com.mundane.androidtechniqueapply.view.widget.ShopView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </com.mundane.androidtechniqueapply.view.widgets.ShopView>
+    </com.mundane.androidtechniqueapply.view.widget.ShopView>
 
 </RelativeLayout>

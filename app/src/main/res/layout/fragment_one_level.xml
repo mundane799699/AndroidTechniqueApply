@@ -14,11 +14,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.mundane.androidtechniqueapply.view.widgets.VerticalViewPager
+    <com.mundane.androidtechniqueapply.view.widget.VerticalViewPager
         android:layout_gravity="center_horizontal"
         android:id="@+id/vertical_viewpager"
         android:layout_width="180dp"
         android:layout_height="320dp">
 
-    </com.mundane.androidtechniqueapply.view.widgets.VerticalViewPager>
+    </com.mundane.androidtechniqueapply.view.widget.VerticalViewPager>
 </LinearLayout>

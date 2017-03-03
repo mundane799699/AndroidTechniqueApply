@@ -10,8 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.mundane.androidtechniqueapply.R;
-import com.mundane.androidtechniqueapply.view.widgets.RefreshLayout;
-import com.mundane.androidtechniqueapply.view.widgets.ShopView;
+import com.mundane.androidtechniqueapply.view.widget.RefreshLayout;
+import com.mundane.androidtechniqueapply.view.widget.ShopView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

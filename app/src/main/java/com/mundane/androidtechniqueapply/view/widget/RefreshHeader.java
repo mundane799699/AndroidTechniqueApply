@@ -1,4 +1,4 @@
-package com.mundane.androidtechniqueapply.view.widgets;
+package com.mundane.androidtechniqueapply.view.widget;
 
 /**
  * Created by AItsuki on 2016/6/13.

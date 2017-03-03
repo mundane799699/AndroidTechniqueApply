@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mundane.androidtechniqueapply.ui.activitity.ListViewInScrollViewActivity">
-    <com.mundane.androidtechniqueapply.view.widgets.MyScrollView
+    <com.mundane.androidtechniqueapply.view.widget.MyScrollView
         android:id="@+id/my_scrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -39,6 +39,6 @@
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
-    </com.mundane.androidtechniqueapply.view.widgets.MyScrollView>
+    </com.mundane.androidtechniqueapply.view.widget.MyScrollView>
 
 </RelativeLayout>
