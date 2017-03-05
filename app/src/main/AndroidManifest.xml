@@ -19,9 +19,9 @@
         </activity>
         <activity android:name=".ui.activitity.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.activitity.HorizontalViewPagerActivity">
@@ -103,8 +103,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:name=".ui.activitity.LikeZhiHuActivity">
+            android:name=".ui.activitity.LikeZhiHuActivity"
+            android:label="知乎滑动隐藏"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="LikeZhiHuActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
     </application>
 

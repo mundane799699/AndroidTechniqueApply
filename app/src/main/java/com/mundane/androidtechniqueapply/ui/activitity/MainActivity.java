@@ -7,8 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.RelativeLayout;
 
 import com.mundane.androidtechniqueapply.R;
-import com.mundane.androidtechniqueapply.view.adapter.MyRecyclerAdapter;
 import com.mundane.androidtechniqueapply.model.ActivityModel;
+import com.mundane.androidtechniqueapply.view.adapter.MyRecyclerAdapter;
 import com.mundane.androidtechniqueapply.view.recyclerviewdecoration.DividerItemDecoration;
 
 import butterknife.BindView;
@@ -48,10 +48,13 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("仿京东以及小鹿美美详情页下拉查看图文详情", null),
 				new ActivityModel("贝塞尔曲线做的开场动画", null),
 				new ActivityModel("仿酷安的各种共享动画", null),
-				new ActivityModel("动画练习合集", null),//把里面分为帧动画, 属性动画, 值动画, 补间动画, 并且每个分为代码实现和xml实现
+				new ActivityModel("动画练习合集", null),
+				//把里面分为帧动画, 属性动画, 值动画, 补间动画, Viewcompat动画,
+				//	还有mAppBar.animate().translationY(mIsHidden ? 0 : -mAppBar.getHeight()).setInterpolator(new DecelerateInterpolator(2)).start(); 这种
+				// 并且每个分为代码实现和xml实现
 				new ActivityModel("仿QQ控件以及小鹿美美顶部tab随滚动透明度变化", null),
 				new ActivityModel("仿微信朋友圈下拉刷新", null),
-				new ActivityModel("仿知乎主页", null),
+				new ActivityModel("仿知乎主页", "LikeZhiHuActivity"),
 				new ActivityModel("仿微信的switchButton", null),
 				new ActivityModel("流式布局", null),
 				new ActivityModel("简易的PhotoView", null),

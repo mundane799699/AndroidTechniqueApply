@@ -9,14 +9,19 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="actionBarStyle">@style/myActionBarTheme</item>
     </style>
-    
+
 
     <style name="myActionBarTheme" parent="@style/Widget.AppCompat.ActionBar">
         <item name="background">@color/black383A3F</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
 </resources>
