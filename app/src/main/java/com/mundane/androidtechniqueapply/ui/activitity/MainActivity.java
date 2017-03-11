@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("仿QQ控件以及小鹿美美顶部tab随滚动透明度变化", null),
 				new ActivityModel("仿微信朋友圈下拉刷新", null),
 				new ActivityModel("仿知乎主页", "LikeZhiHuActivity"),
+				new ActivityModel("retrofit和rxjava结合sample", "RxjavaAndRetrofitActivity"),
 				new ActivityModel("仿微信的switchButton", null),
 				new ActivityModel("流式布局", null),
 				new ActivityModel("简易的PhotoView", null),
@@ -75,7 +76,10 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("搜索, 历史搜索和高亮搜索", null),
 				new ActivityModel("仿微博和闲鱼底部弹出动画", null),
 				new ActivityModel("仿QQ弹出的popupWindow", null),
-				new ActivityModel("自定义ScrollView", null)
+				new ActivityModel("自定义ScrollView", null),
+				new ActivityModel("仿QQ右上角弹出框", null),
+				new ActivityModel("9patch图片", null),
+				new ActivityModel("notification", null)
 		};
 		mAdapter = new MyRecyclerAdapter(arr, this);
 		mRv.setAdapter(mAdapter);
