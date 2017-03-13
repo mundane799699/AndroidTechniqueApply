@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 		mRv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 		mRv.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
 		ActivityModel[] arr = {
+                new ActivityModel("仿新浪微博发微博时候可以拖动图片排序", null),
 				new ActivityModel("竖直的ViewPager", "VerticalViewPagerActivity"),
 				new ActivityModel("横向ViewPager嵌套竖直ViewPager", "HorizontalViewPagerActivity"),
 				new ActivityModel("测试ontouchevent", "TestOntouchEventActivity"),

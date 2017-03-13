@@ -16,6 +16,7 @@ import com.mundane.androidtechniqueapply.ui.fragment.DouBanMovieFragment;
 import com.mundane.androidtechniqueapply.ui.fragment.RxjavaBasicFragment;
 import com.mundane.androidtechniqueapply.ui.fragment.RxjavaMapFragment;
 
+import com.mundane.androidtechniqueapply.ui.fragment.RxjavaZipFragment;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +49,7 @@ public class RxjavaAndRetrofitActivity extends AppCompatActivity {
 		mFragmentList.add(DouBanMovieFragment.newInstance());
 		mFragmentList.add(RxjavaBasicFragment.newInstance());
 		mFragmentList.add(RxjavaMapFragment.newInstance());
+        mFragmentList.add(RxjavaZipFragment.newInstance());
 
 		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), mFragmentList);
 		mViewPager = (ViewPager) findViewById(R.id.container);
@@ -99,7 +101,9 @@ public class RxjavaAndRetrofitActivity extends AppCompatActivity {
 					return "基本";
 				case 2:
 					return "转换(MAP)";
-			}
+                case 3:
+                    return "压合(ZIP)";
+            }
 			return null;
 		}
 	}
