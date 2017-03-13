@@ -14,14 +14,15 @@
         android:text="点我"
         android:textSize="16sp"/>
 
-    <ScrollView
+    <!--如果改成scrollView, 是没有手势事件的-->
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
 
 </LinearLayout>

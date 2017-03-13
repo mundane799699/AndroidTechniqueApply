@@ -1,6 +1,7 @@
 package com.mundane.androidtechniqueapply.http;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import com.mundane.androidtechniqueapply.api.service.FakeApi;
 import com.mundane.androidtechniqueapply.api.service.GankService;
 import com.mundane.androidtechniqueapply.api.service.ZhuangBiService;
 
@@ -55,6 +56,15 @@ public class NetWork {
 			sGankService = retrofit.create(GankService.class);
 		}
 		return sGankService;
+	}
+
+	private static FakeApi fakeApi;
+
+	public static FakeApi getFakeApi() {
+		if (fakeApi == null) {
+			fakeApi = new FakeApi();
+		}
+		return fakeApi;
 	}
 
 }

@@ -93,7 +93,7 @@ public class RxjavaMapFragment extends Fragment {
 		}
 	}
 
-	// todo 我发现切到第一个选项卡再切回来的时候, 虽然视图被销毁了, 但是想page这种全局变量还是保存着的
+	// todo 我发现切到第一个选项卡再切回来的时候, 虽然视图被销毁了, 但是像page这种全局变量还是保存着的
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_rxjava_map, container, false);

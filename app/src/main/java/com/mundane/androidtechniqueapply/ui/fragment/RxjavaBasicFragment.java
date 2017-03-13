@@ -51,7 +51,9 @@ public class RxjavaBasicFragment extends Fragment {
 	SwipeRefreshLayout mSwipeRefreshLayout;
 	@BindView(R.id.rg)
 	RadioGroup mRg;
-	private ZhuangbiListAdapter mZhuangbiListAdapter;
+	//	todo 这么写的好处是每当切换到别的选项卡导致视图销毁再切换回来的时候, adapter不是再次new出来的而是上次的, 并且adapter中保存了上次的数据
+	private ZhuangbiListAdapter mZhuangbiListAdapter = new ZhuangbiListAdapter();
+	private boolean isSwipeRefreshEnabled = false;
 
 	public RxjavaBasicFragment() {
 		// Required empty public constructor
@@ -74,18 +76,33 @@ public class RxjavaBasicFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_rxjava_basic, container, false);
 		ButterKnife.bind(this, view);
-		mZhuangbiListAdapter = new ZhuangbiListAdapter();
 		mGridRv.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 		mGridRv.setAdapter(mZhuangbiListAdapter);
 		mSwipeRefreshLayout.setColorSchemeColors(Color.RED, Color.YELLOW, Color.GREEN, Color.BLUE);
-		mSwipeRefreshLayout.setEnabled(false);
+		mSwipeRefreshLayout.setEnabled(isSwipeRefreshEnabled);
 		mSwipeRefreshLayout.setOnRefreshListener(mOnRefreshListener);
+		isFirstCheck = true;
 		return view;
 	}
+
+	@Override
+	public void onDestroyView() {
+		isFirst = false;
+		super.onDestroyView();
+	}
+
+	private boolean isFirst = true;
+	private boolean isFirstCheck = true;
 
 	@OnCheckedChanged({R.id.searchRb1, R.id.searchRb2, R.id.searchRb3, R.id.searchRb4})
 	public void onCheck(RadioButton searchRb, boolean checked) {
 		if (checked) {
+			//	如果是第一次创建该页面, 则什么都不做, 将isFirst设置为false
+			//	如果不是第一次创建该页面并且是第一次调用onCheck方法, 则不调用, 将isFirstCheck标记设置为false, 表示以后的onCheck方法都不是第一调用了
+			if (!isFirst && isFirstCheck) {
+				isFirstCheck = false;
+				return;
+			}
 			unsubscribe();//解除订阅
 			mZhuangbiListAdapter.setImages(null);
 			mSwipeRefreshLayout.setRefreshing(true);
@@ -137,7 +154,8 @@ public class RxjavaBasicFragment extends Fragment {
 		public void onComplete() {
 			mSwipeRefreshLayout.setRefreshing(false);
 			if (!mSwipeRefreshLayout.isEnabled()) {
-				mSwipeRefreshLayout.setEnabled(true);
+				isSwipeRefreshEnabled = true;
+				mSwipeRefreshLayout.setEnabled(isSwipeRefreshEnabled);
 			}
 		}
 	};

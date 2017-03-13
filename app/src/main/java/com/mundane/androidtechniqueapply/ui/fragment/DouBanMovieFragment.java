@@ -44,6 +44,8 @@ public class DouBanMovieFragment extends Fragment {
 
 	private ProgressDialog mProgressDialog;
 
+	private View mRootView;
+
 
 	public DouBanMovieFragment() {
 		// Required empty public constructor
@@ -86,9 +88,11 @@ public class DouBanMovieFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
-		View view = inflater.inflate(R.layout.fragment_doui_ban_movie, container, false);
-		ButterKnife.bind(this, view);
-		return view;
+		if (mRootView == null) {
+			mRootView = inflater.inflate(R.layout.fragment_doui_ban_movie, container, false);
+			ButterKnife.bind(this, mRootView);
+		}
+		return mRootView;
 	}
 
 	@OnClick(R.id.btn_click_me)
