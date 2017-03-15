@@ -168,7 +168,7 @@ public class ArcMenu extends ViewGroup {
 
 	//为menuItem添加平移动画和旋转动画
 
-	private final int ANIMATION_DURATION = 1000;
+	private final int ANIMATION_DURATION = 300;
 	public void toggleMenu() {
 		int childCount = getChildCount();
 		for (int i = 0; i < childCount - 1; i++) {
@@ -226,8 +226,9 @@ public class ArcMenu extends ViewGroup {
 			rotateAnim.setDuration(ANIMATION_DURATION);
 			rotateAnim.setFillAfter(true);
 
-			animSet.addAnimation(tranAnim);
+			//	fixme 一定要把加入rotateAnim, 再加入tranAnim, 顺序绝对不能错, 否则会出现意想不到的效果
 			animSet.addAnimation(rotateAnim);
+			animSet.addAnimation(tranAnim);
 			childView.startAnimation(animSet);
 
 			final int pos = i + 1;

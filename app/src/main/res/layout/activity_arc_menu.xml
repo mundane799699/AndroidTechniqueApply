@@ -17,50 +17,50 @@
     <com.mundane.androidtechniqueapply.view.widget.ArcMenu
         android:id="@+id/arc_menu"
         app:radius="140dp"
-        app:positon="right_bottom"
+        app:positon="left_bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <RelativeLayout
             android:background="@drawable/composer_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="40dp"
+            android:layout_height="40dp">
 
             <ImageView
                 android:layout_centerInParent="true"
                 android:src="@drawable/composer_icn_plus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
 
         </RelativeLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/composer_music"
             android:tag="Music" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/composer_place"
             android:tag="Place" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/composer_sleep"
             android:tag="Sleep" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/composer_thought"
             android:tag="Sun" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/composer_with"
             android:tag="People" />
 

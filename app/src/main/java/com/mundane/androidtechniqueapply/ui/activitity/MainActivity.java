@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("仿微信底部滑动变色的tab", null),
 				new ActivityModel("圆形头像的多种实现方式", null),
 				new ActivityModel("类似微信中ViewPager的fragment懒加载", null),
-				new ActivityModel("6.0权限示例", null),
+				new ActivityModel("调用系统相机拍照 + 6.0权限示例", "PermissionActivity"),
 				new ActivityModel("检查更新点击下载通知栏进度", null),
 				new ActivityModel("仿饿了么购物车动画", null),
 				new ActivityModel("搜索, 历史搜索和高亮搜索", null),
