@@ -55,6 +55,8 @@ public class RxjavaBasicFragment extends Fragment {
 	private ZhuangbiListAdapter mZhuangbiListAdapter = new ZhuangbiListAdapter();
 	private boolean isSwipeRefreshEnabled = false;
 
+
+	// FIXME: 2017/3/16  bug描述:切换到这一页, 不点击radiobutton, 马上再切换到比如第4页(反正是不相邻的)再点可爱是没有反应的
 	public RxjavaBasicFragment() {
 		// Required empty public constructor
 	}

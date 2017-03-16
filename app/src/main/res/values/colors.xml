@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#303135</color>
     <color name="colorAccent">#7E7E7E</color>
     <color name="black383A3F">#383A3F</color>
+    <color name="toast_stroke_gray">#99d4d4d4</color>
+    <color name="img_down_text_color">#7CC625</color>
+    <color name="footer_text_color_selected">#7CC625</color>
+    <color name="footer_text_color_normal">#307A7B</color>
 </resources>

@@ -32,9 +32,11 @@ public class MainActivity extends AppCompatActivity {
 //		actionBar.setTitle("自定义View合集");
 //		actionBar.setDisplayHomeAsUpEnabled(true);
 		mRv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+		mRv.setHasFixedSize(true);
 		mRv.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
 		ActivityModel[] arr = {
                 new ActivityModel("仿新浪微博发微博时候可以拖动图片排序", null),
+				new ActivityModel("多点触控技术", null),
 				new ActivityModel("竖直的ViewPager", "VerticalViewPagerActivity"),
 				new ActivityModel("横向ViewPager嵌套竖直ViewPager", "HorizontalViewPagerActivity"),
 				new ActivityModel("测试ontouchevent", "TestOntouchEventActivity"),
@@ -49,7 +51,10 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("仿京东以及小鹿美美详情页下拉查看图文详情", null),
 				new ActivityModel("贝塞尔曲线做的开场动画", null),
 				new ActivityModel("仿酷安的各种共享动画", null),
-				new ActivityModel("动画练习合集", null),
+				new ActivityModel("动画练习合集", "AnimationActivity"),
+				new ActivityModel("service相关 + 音乐播放器", null),
+				new ActivityModel("视频播放相关", null),
+				new ActivityModel("饿了么购物页面", null),
 				//把里面分为帧动画, 属性动画, 值动画, 补间动画, Viewcompat动画,
 				//	还有mAppBar.animate().translationY(mIsHidden ? 0 : -mAppBar.getHeight()).setInterpolator(new DecelerateInterpolator(2)).start(); 这种
 				// 并且每个分为代码实现和xml实现

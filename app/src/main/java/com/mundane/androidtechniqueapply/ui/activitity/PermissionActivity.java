@@ -33,6 +33,7 @@ public class PermissionActivity extends BaseActionBarActivity {
 
 	private final int CAMERA_REQUEST_CODE = 1;
 
+	// TODO: 2017/3/16  事实上, 调用系统相机是不需要manifest里面的camera权限的, 现在看来只有二维码和自定义相机这种才需要camera权限
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

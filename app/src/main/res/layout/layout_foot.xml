@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rg"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/activity_animation">
+
+    <RadioButton
+        android:id="@+id/rb_frame"
+        android:text="帧动画"
+        android:checked="true"
+        style="@style/foot_radiobutton"/>
+
+    <RadioButton
+        android:id="@+id/rb_object"
+        android:text="属性动画"
+        style="@style/foot_radiobutton"/>
+
+    <RadioButton
+        android:id="@+id/rb_tween"
+        android:text="补间动画"
+        style="@style/foot_radiobutton"/>
+
+    <RadioButton
+        android:id="@+id/rb_view_compat"
+        android:text="Viewcompat动画"
+        style="@style/foot_radiobutton"/>
+
+    <RadioButton
+        android:id="@+id/rb_value_animation"
+        android:text="值动画"
+        style="@style/foot_radiobutton"/>
+
+</RadioGroup>
