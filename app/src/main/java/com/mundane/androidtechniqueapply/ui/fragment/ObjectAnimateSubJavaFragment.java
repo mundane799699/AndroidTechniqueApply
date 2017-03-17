@@ -1,6 +1,9 @@
 package com.mundane.androidtechniqueapply.ui.fragment;
 
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
@@ -26,7 +29,7 @@ public class ObjectAnimateSubJavaFragment extends Fragment {
 	Button mBtnAlpha;
 	@BindView(R.id.btn_translate)
 	Button mBtnTranslate;
-	@BindView(R.id.btn_scale)
+	@BindView(R.id.btn_color)
 	Button mBtnScale;
 	@BindView(R.id.btn_rotate)
 	Button mBtnRotate;
@@ -59,7 +62,7 @@ public class ObjectAnimateSubJavaFragment extends Fragment {
 		return view;
 	}
 
-	@OnClick({R.id.btn_alpha, R.id.btn_translate, R.id.btn_scale, R.id.btn_rotate, R.id.btn_set})
+	@OnClick({R.id.btn_alpha, R.id.btn_translate, R.id.btn_color, R.id.btn_rotate, R.id.btn_set})
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.btn_alpha:
@@ -68,19 +71,33 @@ public class ObjectAnimateSubJavaFragment extends Fragment {
 			case R.id.btn_translate:
 				translate();
 				break;
-			case R.id.btn_scale:
+			case R.id.btn_color:
 				scale();
 				break;
 			case R.id.btn_rotate:
 				rotation();
 				break;
 			case R.id.btn_set:
-				set();
+//				set1();
+				set2();
 				break;
 		}
 	}
 
-	private void set() {
+	private void set2() {
+		AnimatorSet animatorSet = new AnimatorSet();
+		ObjectAnimator alpha = ObjectAnimator.ofFloat(mIv, "alpha", 1f, 0f, 1f);
+		ObjectAnimator rotation = ObjectAnimator.ofFloat(mIv, "rotation", 0f, 360f);
+		animatorSet.setDuration(2000);
+		animatorSet.playTogether(alpha, rotation);
+		animatorSet.start();
+//		animatorSet.play(alpha).after(rotation).before(alpha).with(rotation);
+//		animatorSet.setStartDelay(1000);
+//		alpha.setStartDelay(1000);
+//		animatorSet.playSequentially(alpha, rotation);
+	}
+
+	private void set1() {
 		PropertyValuesHolder alpha = PropertyValuesHolder.ofFloat("alpha", 1f, 0.5f);
 		PropertyValuesHolder scaleX = PropertyValuesHolder.ofFloat("scaleX", 1f, 0.5f);
 		PropertyValuesHolder scaleY = PropertyValuesHolder.ofFloat("scaleY", 1f, 0.5f);
@@ -88,10 +105,12 @@ public class ObjectAnimateSubJavaFragment extends Fragment {
 	}
 
 	private void rotation() {
-		//	这里设置的是绝对坐标
+		//	这里设置的是绝对坐标, 这两个一定要同时设置, 只设置一个是无效的
 		mIv.setPivotY(0.5f * mIv.getHeight());
-		ObjectAnimator.ofFloat(mIv, "rotation", 0f, 360f).setDuration(5000).start();
-//		ObjectAnimator.ofFloat(mIv, "rotationY", 0f, 180f).setDuration(1000).start();
+		mIv.setPivotX(0);
+		ObjectAnimator.ofFloat(mIv, "rotation", 0f, 360f).setDuration(2000).start();
+
+//		ObjectAnimator.ofFloat(mIv, "rotationY", 0f, 180f).setDuration(1000).start();//绕着图片中心的Y轴旋转
 
 	}
 
@@ -109,7 +128,6 @@ public class ObjectAnimateSubJavaFragment extends Fragment {
 			}
 		});
 		objectAnimator.start();
-
 	}
 
 	private void translate() {
@@ -119,6 +137,29 @@ public class ObjectAnimateSubJavaFragment extends Fragment {
 
 	private void alpha() {
 		ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(mIv, "alpha", 1, 0);
+		objectAnimator.addListener(new Animator.AnimatorListener() {
+			@Override
+			public void onAnimationStart(Animator animation) {
+			}
+
+			@Override
+			public void onAnimationEnd(Animator animation) {
+			}
+
+			@Override
+			public void onAnimationCancel(Animator animation) {
+			}
+
+			@Override
+			public void onAnimationRepeat(Animator animation) {
+			}
+		});
+		objectAnimator.addListener(new AnimatorListenerAdapter() {
+			@Override
+			public void onAnimationEnd(Animator animation) {
+				super.onAnimationEnd(animation);
+			}
+		});
 		objectAnimator.setDuration(3000);
 //		objectAnimator.setFloatValues(mIv.getAlpha(), 1);
 		objectAnimator.setRepeatCount(ObjectAnimator.INFINITE);
