@@ -11,6 +11,7 @@ import android.widget.RadioGroup;
 import com.mundane.androidtechniqueapply.R;
 import com.mundane.androidtechniqueapply.ui.fragment.FrameAnimationFragment;
 import com.mundane.androidtechniqueapply.ui.fragment.ObjectAnimateFragment;
+import com.mundane.androidtechniqueapply.ui.fragment.ValueAnimationFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,11 +38,21 @@ public class AnimationActivity extends AppCompatActivity {
 	}
 
 	private void initEvent() {
+
+//		WindowManager wm = getWindowManager();
+//		DisplayMetrics metrics = new DisplayMetrics();
+//		Log.d("metrics.widthPixels = ", metrics.widthPixels + "");
+//		Log.d("metrics.heightPixels = ", metrics.heightPixels + "");
+//		wm.getDefaultDisplay().getMetrics(metrics);
+//		Log.d("metrics.widthPixels = ", metrics.widthPixels + "");
+//		Log.d("metrics.heightPixels = ", metrics.heightPixels + "");
+
 		mFragmentList = new ArrayList<>();
 		mFragmentList.add(FrameAnimationFragment.newInstance());
 		mFragmentList.add(ObjectAnimateFragment.newInstance());
 		mFragmentList.add(FrameAnimationFragment.newInstance());
 		mFragmentList.add(FrameAnimationFragment.newInstance());
+		mFragmentList.add(ValueAnimationFragment.newInstance());
 		turnToFragment();
 		mRg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 			@Override
@@ -58,6 +69,9 @@ public class AnimationActivity extends AppCompatActivity {
 						break;
 					case R.id.rb_view_compat:
 						mFragmentIndex = 3;
+						break;
+					case R.id.rb_value_animation:
+						mFragmentIndex = 4;
 						break;
 					default:
 						break;

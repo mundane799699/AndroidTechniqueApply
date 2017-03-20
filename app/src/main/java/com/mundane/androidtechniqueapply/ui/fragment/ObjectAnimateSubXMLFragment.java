@@ -4,6 +4,7 @@ package com.mundane.androidtechniqueapply.ui.fragment;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.ObjectAnimator;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -89,12 +90,12 @@ public class ObjectAnimateSubXMLFragment extends Fragment {
 	private void color() {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 			//	前两位ff表示透明度, ff表示完全不透明
-			ObjectAnimator color = ObjectAnimator.ofArgb(mIv, "backgroundColor", 0xff000000, 0xffffffff).setDuration(2000);
+			ObjectAnimator color = ObjectAnimator.ofArgb(mIv, "backgroundColor", Color.TRANSPARENT, 0xffff0000, 0xffffff00, Color.TRANSPARENT).setDuration(3000);
 // 	第二个参数主要是看第一个参数target有没有set第二个参数的方法, 比如mIv.setBackgroundColor(), 参数类型也是int的, 而并没有mIv.setBackground()方法
 //			ObjectAnimator color = ObjectAnimator.ofArgb(mIv, "background", 0xff000000, 0xffffffff).setDuration(2000);
 			color.start();
 		} else {
-			
+			// TODO: 2017/3/20  
 		}
 	}
 

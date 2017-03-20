@@ -33,7 +33,7 @@
             android:text="颜色"/>
 
         <Button
-            android:text="旋转"
+            android:text="比例"
             android:id="@+id/btn_rotate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
