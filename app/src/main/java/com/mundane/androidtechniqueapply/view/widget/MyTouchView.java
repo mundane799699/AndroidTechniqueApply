@@ -31,6 +31,7 @@ public class MyTouchView extends FrameLayout {
 	}
 
 
+	//如果一个View的onTouchEvent返回了false,那么它父容器的onTouchEvent方法将会被调用
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		Toast.makeText(mContext, "MyTouchView", Toast.LENGTH_SHORT).show();

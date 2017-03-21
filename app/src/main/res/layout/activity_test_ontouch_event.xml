@@ -10,7 +10,8 @@
     <com.mundane.androidtechniqueapply.view.widget.MyTouchView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        
+
+        <!--如果一个View的onTouchEvent返回了false,那么它父容器的onTouchEvent方法将会被调用-->
         <com.mundane.androidtechniqueapply.view.widget.MyButton
             android:gravity="center"
             android:text="button"

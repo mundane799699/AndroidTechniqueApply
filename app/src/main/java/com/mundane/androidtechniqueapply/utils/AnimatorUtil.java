@@ -28,7 +28,7 @@ public class AnimatorUtil {
 	//	隐藏View
 	public static void scaleHide(View view, ViewPropertyAnimatorListener viewPropertyAnimatorListener) {
 		ViewCompat.animate(view)
-				.scaleY(0.0f)
+				.scaleX(0.0f)
 				.scaleY(0.0f)
 				.alpha(0.0f)
 				.setDuration(300)

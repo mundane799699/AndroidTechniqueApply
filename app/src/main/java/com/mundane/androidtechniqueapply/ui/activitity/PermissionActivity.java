@@ -43,8 +43,9 @@ public class PermissionActivity extends BaseActionBarActivity {
 
 	@OnClick(R.id.btn_request_permission)
 	public void onClick() {
-//		requestPermission();
-		ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, CAMERA_REQUEST_CODE);
+		requestPermission();
+		//	申请相机权限, 这句代码会跳出那个系统定义的UI出来
+		//	ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, CAMERA_REQUEST_CODE);
 	}
 
 	@TargetApi(Build.VERSION_CODES.M)

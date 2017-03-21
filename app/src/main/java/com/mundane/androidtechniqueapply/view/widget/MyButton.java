@@ -1,16 +1,16 @@
 package com.mundane.androidtechniqueapply.view.widget;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.Button;
 import android.widget.Toast;
 
 /**
  * Created by mundane on 2017/2/25 13:46
  */
 
-public class MyButton extends Button {
+public class MyButton extends AppCompatButton {
 	public MyButton(Context context) {
 		super(context);
 		init(context);
@@ -36,6 +36,7 @@ public class MyButton extends Button {
 
 	private final String TAG = getClass().getSimpleName();
 
+	//如果一个View的onTouchEvent返回了false,那么它父容器的onTouchEvent方法将会被调用
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		Toast.makeText(mContext, "Button", Toast.LENGTH_SHORT).show();
