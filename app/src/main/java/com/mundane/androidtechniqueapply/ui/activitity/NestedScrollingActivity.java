@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.mundane.androidtechniqueapply.R;
@@ -54,12 +55,19 @@ public class NestedScrollingActivity extends AppCompatActivity {
 
 			}
 		});
+
+		mIndicator.setOnTitleClickListener(new SimpleViewPagerIndicator.OnTitleClickListener() {
+			@Override
+			public void onTitleClick(View view, int index) {
+				mViewPager.setCurrentItem(index, true);
+			}
+		});
 	}
 
 	private void initData() {
 		mIndicator.setTitles(mTitles);
 		for (int i = 0; i < mTitles.length; i++) {
-			mFragments[i] = (TabFragment) TabFragment.newInstance(mTitles[i]);
+			mFragments[i] = TabFragment.newInstance(mTitles[i]);
 		}
 
 		mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {

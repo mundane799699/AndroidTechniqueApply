@@ -54,12 +54,16 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("动画练习合集", "AnimationActivity"),
 				new ActivityModel("service、IntentService相关 + 音乐播放器", null),
 				new ActivityModel("视频播放相关", null),
+				new ActivityModel("双向拖动的seekbar", "DoubleSeekBarActivity"),
+				new ActivityModel("自定义ViewPagerIndicator", null),
 				new ActivityModel("饿了么购物页面", null),
+				new ActivityModel("canvas的demo", "CanvasTestActivity"),
 				//把里面分为帧动画, 属性动画, 值动画, 补间动画, Viewcompat动画,
 				//	还有mAppBar.animate().translationY(mIsHidden ? 0 : -mAppBar.getHeight()).setInterpolator(new DecelerateInterpolator(2)).start(); 这种
 				//	上面那段代码抄自meizhi
 				// 并且每个分为代码实现和xml实现
 				new ActivityModel("仿QQ控件以及小鹿美美顶部tab随滚动透明度变化", null),
+				new ActivityModel("演示MotionEvent.ACTION_CANCEL", "ActionCancelTestActivity"),
 				new ActivityModel("仿微信朋友圈下拉刷新", null),
 				new ActivityModel("仿知乎主页", "LikeZhiHuActivity"),
 				new ActivityModel("retrofit和rxjava结合sample", "RxjavaAndRetrofitActivity"),

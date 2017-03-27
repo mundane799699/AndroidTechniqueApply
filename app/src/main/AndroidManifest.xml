@@ -154,6 +154,31 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activitity.ViewPagerIndicatorActivity">
+        </activity>
+        <activity
+            android:name=".ui.activitity.CanvasTestActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="CanvasTestActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activitity.DoubleSeekBarActivity">
+            <intent-filter>
+                <action android:name="DoubleSeekBarActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activitity.ActionCancelTestActivity">
+            <intent-filter>
+                <action android:name="ActionCancelTestActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
