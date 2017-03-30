@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("又一个解决滑动冲突的demo", null),//可以做成解决滑动冲突合集
 				new ActivityModel("多重ViewPager嵌套解决滑动冲突", null),
 				new ActivityModel("仿微信底部滑动变色的tab", null),
-				new ActivityModel("圆形头像的多种实现方式", null),
+				new ActivityModel("圆形头像的多种实现方式", "RoundAvatarActivity"),
 				new ActivityModel("类似微信中ViewPager的fragment懒加载", null),
 				new ActivityModel("调用系统相机拍照 + 6.0权限示例", "PermissionActivity"),
 				new ActivityModel("检查更新点击下载通知栏进度", null),

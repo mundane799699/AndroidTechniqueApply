@@ -20,4 +20,38 @@
         <attr name="seek_text_color" format="color" />
         <attr name="seek_text_size" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="CircleProgressImageView">
+        <attr name="borderColor" format="color"></attr>
+        <attr name="borderWidth" format="dimension"></attr>
+        <attr name="textColor" format="color"></attr>
+        <attr name="textSize" format="dimension"></attr>
+        <attr name="progress" format="integer"></attr>
+    </declare-styleable>
+
+    <attr name="borderRadius" format="dimension" />
+
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="RoundImageViewByXfermode">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchView">
+        <attr name="switch_bg_close_color" format="color" />
+        <attr name="switch_bg_open_color" format="color" />
+        <attr name="switch_strock_color" format="color" />
+        <attr name="switch_ball_color" format="color" />
+        <attr name="switch_ball_shadow_color" format="color" />
+        <attr name="switch_bg_strock_width" format="dimension" />
+    </declare-styleable>
 </resources>

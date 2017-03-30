@@ -259,7 +259,6 @@ public class DoubleSeekBar extends View {
 	}
 
 
-
 	private void drawText(Canvas canvas) {
 		if (data == null) {
 			return;

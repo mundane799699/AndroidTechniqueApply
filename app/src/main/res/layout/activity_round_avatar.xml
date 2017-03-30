@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mundane.androidtechniqueapply.ui.activitity.RoundAvatarActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mundane.androidtechniqueapply.view.widget.CircleLayerImageView
+            android:id="@+id/iv_circle_layer_image_view"
+            android:src="@drawable/a4"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+        
+        <com.mundane.androidtechniqueapply.view.widget.CircleProgressImage
+            app:borderColor="#D41313"
+            android:src="@drawable/a4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <com.mundane.androidtechniqueapply.view.widget.MyXfermode
+            android:layout_width="200dp"
+            android:layout_height="300dp"/>
+
+        <com.mundane.androidtechniqueapply.view.widget.RoundImageView
+            android:src="@drawable/a6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="@dimen/round_bitmap_width"
+            android:layout_height="@dimen/round_bitmap_width"/>
+
+        <com.mundane.androidtechniqueapply.view.widget.RoundImageViewByXfermode
+            android:src="@drawable/a4"
+            app:type="circle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
