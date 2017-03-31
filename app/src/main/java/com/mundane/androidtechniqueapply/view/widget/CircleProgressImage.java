@@ -43,7 +43,7 @@ public class CircleProgressImage extends ImageView {
 
         borderColor = typedArray.getColor(R.styleable.CircleProgressImageView_borderColor, Color.parseColor("#D41313"));
         borderWidth = typedArray.getDimensionPixelSize(R.styleable.CircleProgressImageView_borderWidth, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, getContext().getResources().getDisplayMetrics()));
-        int textColor = typedArray.getDimensionPixelOffset(R.styleable.CircleProgressImageView_textColor, Color.WHITE);
+        int textColor = typedArray.getColor(R.styleable.CircleProgressImageView_textColor, Color.WHITE);
         int textSize= typedArray.getDimensionPixelSize(R.styleable.CircleProgressImageView_textSize, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 20, getResources().getDisplayMetrics()));
         progress = typedArray.getInt(R.styleable.CircleProgressImageView_progress, 0);
 

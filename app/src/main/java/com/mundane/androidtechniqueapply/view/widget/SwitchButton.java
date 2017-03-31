@@ -1,5 +1,9 @@
 package com.mundane.androidtechniqueapply.view.widget;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -12,27 +16,26 @@ import android.util.TypedValue;
 import android.view.View;
 
 import com.mundane.androidtechniqueapply.R;
+import com.mundane.androidtechniqueapply.view.evaluator.ColorEvaluator;
 
 /**
  * Created by fangyuan.zhou on 2017/3/30 15:19
  */
 
-public class SwitchButton extends View {
+public class SwitchButton extends View implements View.OnClickListener {
 
-	private int switchViewBgCloseColor;
-	private int switchViewBgOpenColor;
-	private int switchViewStrockWidth;
+	private float switchViewStrockWidth;
 	private int switchViewStrockColor;
 	private int switchViewBallColor;
-	private Paint mBgPaint;
 	private Paint mBallPaint;
-	private Paint mStokePaint;
+	private Paint mBgPaint;
 	private int mViewHeight;
 	private int mViewWidth;
 	private int mStrokeRadius;
-	private int mSolidRadius;
+	private float mSolidRadius;
 	private RectF mBgStrokeRectF;
 	private RectF mBgRectF;
+	private int BALL_X_RIGHT;
 
 	public SwitchButton(Context context) {
 		this(context, null);
@@ -49,15 +52,9 @@ public class SwitchButton extends View {
 		for (int i = 0; i < indexCount; i++) {
 			int attr = typedArray.getIndex(i);
 			switch (attr) {
-				case R.styleable.SwitchView_switch_bg_close_color:
-					switchViewBgCloseColor = typedArray.getColor(attr, Color.BLACK);
-					break;
-				case R.styleable.SwitchView_switch_bg_open_color:
-					switchViewBgOpenColor = typedArray.getColor(attr, Color.BLACK);
-					break;
-				case R.styleable.SwitchView_switch_bg_strock_width:
-					switchViewStrockWidth = typedArray.getDimensionPixelOffset(attr, 0);
-					break;
+//				case R.styleable.SwitchView_switch_bg_strock_width:
+//					switchViewStrockWidth = typedArray.getDimensionPixelOffset(attr, 0);//从dp直接转化成了px
+//					break;
 				case R.styleable.SwitchView_switch_strock_color:
 					switchViewStrockColor = typedArray.getColor(attr, Color.BLACK);
 					break;
@@ -70,22 +67,36 @@ public class SwitchButton extends View {
 		initData();
 	}
 
+	private int greyColor;
+	private int greenColor;
 	private void initData() {
-		mBgPaint = createPaint(switchViewBgCloseColor, 0, Paint.Style.FILL, 0);
+
+		greyColor = switchViewStrockColor;
+		greenColor = Color.parseColor("#1AAC19");
+
+//		mBgPaint = createPaint(switchViewBgCloseColor, 0, Paint.Style.FILL, 0);
 		mBallPaint = createPaint(switchViewBallColor, 0, Paint.Style.FILL, 0);
-		mStokePaint = createPaint(switchViewStrockColor, 0, Paint.Style.FILL, 0);
+		mBgPaint = createPaint(switchViewStrockColor, 0, Paint.Style.FILL, 0);
+		mCurrentState = State.CLOSE;
+		setOnClickListener(this);
 	}
 
 	private float mSwitchBallx;
+
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		mViewHeight = h;
 		mViewWidth = w;
 
+		//	默认描边宽度是控件宽度的1/30, 比如控件宽度是120dp, 描边宽度就是4dp
+		switchViewStrockWidth = w * 1.0f / 30;
+
 		mStrokeRadius = mViewHeight / 2;
 		mSolidRadius = (mViewHeight - 2 * switchViewStrockWidth) / 2;
+		BALL_X_RIGHT = mViewWidth - mStrokeRadius;
 
-		mSwitchBallx = mSolidRadius;
+
+		mSwitchBallx = mStrokeRadius;
 		mBgStrokeRectF = new RectF(0, 0, mViewWidth, mViewHeight);
 		mBgRectF = new RectF(switchViewStrockWidth, switchViewStrockWidth, mViewWidth - switchViewStrockWidth, mViewHeight - switchViewStrockWidth);
 
@@ -139,8 +150,8 @@ public class SwitchButton extends View {
 	}
 
 	private void drawSwitchBg(Canvas canvas) {
-		canvas.drawRoundRect(mBgStrokeRectF, mStrokeRadius, mStrokeRadius, mStokePaint);
-		canvas.drawRoundRect(mBgRectF, mSolidRadius, mSolidRadius, mBgPaint);
+		canvas.drawRoundRect(mBgStrokeRectF, mStrokeRadius, mStrokeRadius, mBgPaint);
+//		canvas.drawRoundRect(mBgRectF, mSolidRadius, mSolidRadius, mBgPaint);
 	}
 
 	private Paint createPaint(int paintColor, int textSize, Paint.Style style, int lineWidth) {
@@ -153,5 +164,82 @@ public class SwitchButton extends View {
 		paint.setStrokeCap(Paint.Cap.ROUND);
 		paint.setStrokeJoin(Paint.Join.ROUND);
 		return paint;
+	}
+
+	private enum State {
+		OPEN, CLOSE
+	}
+
+	private State mCurrentState;
+
+	public interface OnCheckedChangeListener {
+		void onCheckedChanged(SwitchButton buttonView, boolean isChecked);
+	}
+
+	private OnCheckedChangeListener mOnCheckedChangeListener;
+
+	public void setOnCheckedChangeListener(OnCheckedChangeListener listener) {
+		this.mOnCheckedChangeListener = listener;
+	}
+
+	@Override
+	public void onClick(View v) {
+		mCurrentState = (mCurrentState == State.CLOSE ? State.OPEN : State.CLOSE);
+		//绿色	#1AAC19
+		//灰色	#999999
+		if (mCurrentState == State.CLOSE) {
+			animate(BALL_X_RIGHT, mStrokeRadius, greenColor, greyColor);
+		} else {
+			animate(mStrokeRadius, BALL_X_RIGHT, greyColor, greenColor);
+		}
+		if (mOnCheckedChangeListener != null) {
+			if (mCurrentState == State.OPEN) {
+				mOnCheckedChangeListener.onCheckedChanged(this, true);
+			} else {
+				mOnCheckedChangeListener.onCheckedChanged(this, false);
+			}
+		}
+	}
+
+	private void animate(int from, int to, int startColor, int endColor) {
+		ValueAnimator translate = ValueAnimator.ofFloat(from, to);
+		translate.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+			@Override
+			public void onAnimationUpdate(ValueAnimator animation) {
+				mSwitchBallx = ((float) animation.getAnimatedValue());
+				postInvalidate();
+			}
+		});
+
+		ValueAnimator color = null;
+//		if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+//			color = ValueAnimator.ofArgb(startColor, endColor);
+//		} else {
+			color = ValueAnimator.ofObject(new ColorEvaluator(), startColor, endColor);
+//		}
+		color.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+			@Override
+			public void onAnimationUpdate(ValueAnimator animation) {
+				switchViewStrockColor = ((int) animation.getAnimatedValue());
+				mBgPaint.setColor(switchViewStrockColor);
+				postInvalidate();
+			}
+		});
+
+		AnimatorSet animatorSet = new AnimatorSet();
+		animatorSet.playTogether(translate, color);
+		animatorSet.setDuration(200);
+		animatorSet.addListener(new AnimatorListenerAdapter() {
+			@Override
+			public void onAnimationStart(Animator animation) {
+				setClickable(false);
+			}
+
+			@Override
+			public void onAnimationEnd(Animator animation) {
+				setClickable(true);
+			}
+		});
+		animatorSet.start();
 	}
 }

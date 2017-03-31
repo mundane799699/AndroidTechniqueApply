@@ -47,8 +47,6 @@
     </declare-styleable>
 
     <declare-styleable name="SwitchView">
-        <attr name="switch_bg_close_color" format="color" />
-        <attr name="switch_bg_open_color" format="color" />
         <attr name="switch_strock_color" format="color" />
         <attr name="switch_ball_color" format="color" />
         <attr name="switch_ball_shadow_color" format="color" />

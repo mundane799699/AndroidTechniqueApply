@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("仿微信朋友圈下拉刷新", null),
 				new ActivityModel("仿知乎主页", "LikeZhiHuActivity"),
 				new ActivityModel("retrofit和rxjava结合sample", "RxjavaAndRetrofitActivity"),
-				new ActivityModel("仿微信的switchButton", null),
+				new ActivityModel("仿微信的switchButton", "LikeWeiXinStateButtonActivity"),
 				new ActivityModel("流式布局", "FlowLayoutActivity"),
 				new ActivityModel("简易的PhotoView", null),
 				new ActivityModel("简易的ImageLoader", null),
