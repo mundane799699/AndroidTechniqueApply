@@ -193,6 +193,13 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activitity.LikeWeChatMainActivity">
+            <intent-filter>
+                <action android:name="LikeWeChatMainActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

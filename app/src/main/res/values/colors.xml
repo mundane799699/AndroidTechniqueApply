@@ -8,4 +8,9 @@
     <color name="img_down_text_color">#7CC625</color>
     <color name="footer_text_color_selected">#7CC625</color>
     <color name="footer_text_color_normal">#307A7B</color>
+
+    <color name="tab_text_green">#45C01A</color>
+    <color name="tab_text_gray">#999999</color>
+
+    <color name="tab_bg_line">#D7D7D7</color>
 </resources>

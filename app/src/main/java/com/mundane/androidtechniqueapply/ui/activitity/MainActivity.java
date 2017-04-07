@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 				//	还有mAppBar.animate().translationY(mIsHidden ? 0 : -mAppBar.getHeight()).setInterpolator(new DecelerateInterpolator(2)).start(); 这种
 				//	上面那段代码抄自meizhi
 				// 并且每个分为代码实现和xml实现
-				new ActivityModel("仿QQ控件以及小鹿美美顶部tab随滚动透明度变化", null),
+				new ActivityModel("仿QQ空间以及小鹿美美顶部tab随滚动透明度变化", null),
 				new ActivityModel("演示MotionEvent.ACTION_CANCEL", "ActionCancelTestActivity"),
 				new ActivityModel("仿微信朋友圈下拉刷新", null),
 				new ActivityModel("仿知乎主页", "LikeZhiHuActivity"),
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("自定义下拉刷新", "CustomPullToRefreshActivity"),
 				new ActivityModel("又一个解决滑动冲突的demo", null),//可以做成解决滑动冲突合集
 				new ActivityModel("多重ViewPager嵌套解决滑动冲突", null),
-				new ActivityModel("仿微信底部滑动变色的tab", null),
+				new ActivityModel("仿微信底部滑动变色的tab", "LikeWeChatMainActivity"),
 				new ActivityModel("圆形头像的多种实现方式", "RoundAvatarActivity"),
 				new ActivityModel("类似微信中ViewPager的fragment懒加载", null),
 				new ActivityModel("调用系统相机拍照 + 6.0权限示例", "PermissionActivity"),

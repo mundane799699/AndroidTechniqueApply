@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mundane.androidtechniqueapply.ui.activitity.LikeWeChatMainActivity">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/tab_bg_line" />
+    
+    <LinearLayout
+        android:background="#F7F7F7"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <com.mundane.androidtechniqueapply.view.widget.GradientImageWithTextView
+            android:id="@+id/tab_wechat"
+            app:all_text="微信"
+            app:bottom_color="@color/tab_text_gray"
+            app:top_color="@color/tab_text_green"
+            app:bottom_imageview="@drawable/message_grey"
+            app:top_imageview="@drawable/message_green"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+        </com.mundane.androidtechniqueapply.view.widget.GradientImageWithTextView>
+        <com.mundane.androidtechniqueapply.view.widget.GradientImageWithTextView
+            android:id="@+id/tab_contact"
+            app:all_text="通讯录"
+            app:bottom_color="@color/tab_text_gray"
+            app:top_color="@color/tab_text_green"
+            app:bottom_imageview="@drawable/contact_grey"
+            app:top_imageview="@drawable/contact_green"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+        </com.mundane.androidtechniqueapply.view.widget.GradientImageWithTextView>
+        <com.mundane.androidtechniqueapply.view.widget.GradientImageWithTextView
+            android:id="@+id/tab_discover"
+            app:all_text="发现"
+            app:bottom_color="@color/tab_text_gray"
+            app:top_color="@color/tab_text_green"
+            app:bottom_imageview="@drawable/discover_grey"
+            app:top_imageview="@drawable/discover_green"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+        </com.mundane.androidtechniqueapply.view.widget.GradientImageWithTextView>
+        <com.mundane.androidtechniqueapply.view.widget.GradientImageWithTextView
+            android:id="@+id/tab_me"
+            app:all_text="我"
+            app:bottom_color="@color/tab_text_gray"
+            app:top_color="@color/tab_text_green"
+            app:bottom_imageview="@drawable/me_grey"
+            app:top_imageview="@drawable/me_green"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+        </com.mundane.androidtechniqueapply.view.widget.GradientImageWithTextView>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

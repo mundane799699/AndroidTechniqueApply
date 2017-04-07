@@ -52,4 +52,24 @@
         <attr name="switch_ball_shadow_color" format="color" />
         <attr name="switch_bg_strock_width" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="GradientTextView">
+        <attr name="text" format="string"/>
+        <attr name="text_size" format="float"/>
+        <attr name="top_text_color" format="color"/>
+        <attr name="bottom_text_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="GradientImageView">
+        <attr name="top_image" format="reference"/>
+        <attr name="bottom_image" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="GradientImageWithTextView">
+        <attr name="top_imageview" format="reference"/>
+        <attr name="bottom_imageview" format="reference"/>
+        <attr name="all_text" format="string"/>
+        <attr name="top_color" format="color"/>
+        <attr name="bottom_color" format="color"/>
+    </declare-styleable>
 </resources>
