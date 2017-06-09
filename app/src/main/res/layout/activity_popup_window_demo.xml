@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mundane.androidtechniqueapply.ui.activitity.PopupWindowDemoActivity">
+
+    <TextView
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/tv_pop"
+        android:text="弹出popupWindow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearLayoutBg"
+        android:background="#b0000000"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.9"/>
+
+</LinearLayout>

@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
 				new ActivityModel("自定义ViewPagerIndicator", null),
 				new ActivityModel("饿了么购物页面", null),
 				new ActivityModel("canvas的demo", "CanvasTestActivity"),
+				new ActivityModel("popupwindowdemo", "PopupWindowDemoActivity"),
+				new ActivityModel("ConstraintLayoutDemo", "ConstraintLayoutDemoActivity"),
 				//把里面分为帧动画, 属性动画, 值动画, 补间动画, Viewcompat动画,
 				//	还有mAppBar.animate().translationY(mIsHidden ? 0 : -mAppBar.getHeight()).setInterpolator(new DecelerateInterpolator(2)).start(); 这种
 				//	上面那段代码抄自meizhi
